@@ -1,0 +1,633 @@
+/* -------------------- GLOBAL -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #F7F8F6;
+    color: #253127;
+    line-height: 1.8;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1,h2,h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    padding: 110px 10%;
+}
+
+
+/* -------------------- NAVBAR -------------------- */
+
+#navbar {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 10%;
+
+    transition: 0.4s;
+    z-index: 999;
+}
+
+#navbar.scrolled {
+
+    background: rgba(24,50,36,.95);
+    backdrop-filter: blur(10px);
+
+    padding: 14px 10%;
+
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+}
+
+.logo {
+
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+#navbar ul {
+
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+#navbar a {
+
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#navbar a:hover {
+
+    color: #B8D8BE;
+}
+
+
+/* -------------------- HERO -------------------- */
+
+.hero {
+
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.hero img {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        rgba(20,45,35,.65),
+        rgba(18,35,28,.65)
+    );
+}
+
+.hero-content {
+
+    position: relative;
+    text-align: center;
+    color: white;
+
+    width: min(760px,90%);
+}
+
+.hero-label {
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: .85rem;
+    opacity: .9;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+
+    font-size: clamp(3rem,8vw,5.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.hero-description {
+
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto auto 40px;
+}
+
+.scroll-button {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid white;
+    border-radius: 40px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.scroll-button:hover {
+
+    background: white;
+    color: #184E3B;
+}
+
+
+/* -------------------- ABOUT -------------------- */
+
+.intro-section {
+    max-width: 1400px; /* Gives more width so the text can spread out to the right */
+    margin: 0 auto;
+    padding: 80px 2rem;
+}
+
+.about-container {
+    display: flex;
+    align-items: center; /* Vertically centers the image relative to the text block */
+    gap: 50px; /* Space between the image and the text */
+    width: 100%;
+}
+
+.about-image {
+    flex-shrink: 0;
+    width: 320px;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Removed negative margin to restore natural flex flow */
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1; /* Takes up all remaining space on the right side */
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    margin-bottom: 15px;
+    color: #49544B;
+}
+
+/* -------------------- PROJECT CHAPTER -------------------- */
+
+.project-section {
+
+    background: white;
+}
+
+.project-section h2 {
+
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.project-summary {
+
+    max-width: 3000px;
+    font-size: 1.15rem;
+    color: #526158;
+
+    margin-bottom: 30px;
+}
+
+.project-cover {
+
+    border-radius: 20px;
+    margin-bottom: 35px;
+}
+
+
+/* Metadata */
+
+.project-meta {
+    display: flex; 
+    gap: 80px; 
+    margin-bottom: 40px;
+}
+
+.project-meta span {
+    color: #7A867F;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: 2px;
+}
+
+.project-meta p {
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+
+/* Story layout */
+
+.story-block {
+    display: block; /* Removes 2-column grid layout */
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.story-text {
+    max-width: 3000px; /* Widens text across the page */
+}
+
+.story-text h3 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.story-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #49544B;
+    margin-bottom: 20px; /* Adds clean spacing between each paragraph */
+}
+
+.story-text a {
+    color: rgba(24, 50, 36, 0.9); /* Replace with your preferred color */
+    text-decoration: underline; /* Keep or remove standard link underline */
+}
+
+/* Optional: change color when hovering */
+.story-text a:hover {
+    color: #1a365d; 
+}
+
+.story-image img {
+
+    border-radius: 16px;
+}
+
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, max-content)); /* Hugs image width to fix gap */
+    gap: 20px;
+    margin-bottom: 80px;
+    justify-content: start; /* Aligns maps neatly to the left */
+}
+
+.gallery img {
+    max-height: 400px;
+    max-width: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform .3s;
+}
+
+.gallery img:hover {
+
+    transform: scale(1.02);
+}
+
+/* Clickable gallery maps */
+
+.gallery-map {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 16px;
+    display: inline-block;
+    width: fit-content; /* Restricts wrapper to exact image width */
+}
+
+.gallery-map img {
+    max-height: 400px;
+    width: auto; /* Maintains correct aspect ratio */
+    display: block;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-map:hover img {
+    transform: scale(1.02);
+}
+
+.gallery-map .map-expand {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(24, 50, 36, 0.9);
+    color: white;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    pointer-events: none; /* Prevents button from blocking image click */
+    z-index: 2;
+}
+
+
+/* -------------------- NEW PROJECT EXTENSIONS -------------------- */
+
+.border-top {
+    border-top: 1px solid #E5E8E5;
+    padding-top: 90px;
+}
+
+.sub-project {
+    margin-bottom: 80px;
+}
+
+/* Embedded Media Containers */
+.embed-container {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f0f0f0;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.embed-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.embed-container.ppt-ratio {
+    min-height: 650px;     /* Guarantees a solid default height on large screens */
+}
+
+/* Aspect Ratios */
+.ppt-ratio {
+    aspect-ratio: 16 / 9;
+    max-width: 3000px;
+    width: 100%;
+}
+
+.square-ratio {
+    aspect-ratio: 1 / 1;
+    max-width: 550px;
+}
+
+.webmap-ratio {
+    aspect-ratio: 16 / 10; 
+    max-width:3000px;     
+    width: 100%;
+    min-height: 650px;    
+}
+
+.code-ratio {
+    height: 500px;
+    max-width: 1000px;
+}
+
+.code-container {
+    max-width: 1200px;
+    width: 100%;
+    max-height: 600px; /* Limits height and adds scrollbar for long code */
+    margin-bottom: 30px;
+    border-radius: 16px;
+    overflow: auto; /* Enables vertical and horizontal scrolling */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.code-container pre {
+    margin: 0 !important;
+    padding: 24px !important;
+    border-radius: 16px !important;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.screen-ratio {
+    aspect-ratio: 16 / 10;
+    max-width: 1000px;
+}
+
+/* Image Carousels */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    background: #111;
+}
+
+/* Ensure carousel slide fits the image height without cropping */
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important; /* Fits entire map within the height/width bounds */
+    background-color: #f8f9fa; /* Optional: neutral background for padded sides */
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Control Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(24, 50, 36, 0.8);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(24, 50, 36, 1);
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+
+/* -------------------- LIGHTBOX MODAL -------------------- */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* -------------------- FOOTER -------------------- */
+
+footer {
+
+    background: #183224;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 120px 10%;
+}
+
+footer h2 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+}
+
+/* Force footer links and visited links to white with underline */
+#contact a,
+#contact a:visited,
+#contact a:hover,
+#contact a:active {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+#contact p {
+    color: #ffffff !important;
+}
+
+
+/* -------------------- MOBILE -------------------- */
+
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .about-image {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .about-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+
+    #navbar ul {
+        gap: 18px;
+        font-size: .9rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .story-block {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 90px 8%;
+    }
+
+    .project-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .intro-section h2 {
+        font-size: 2rem;
+    }
+}
