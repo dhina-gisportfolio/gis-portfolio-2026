@@ -70,7 +70,7 @@
         <!-- Text Content -->
         <div class="about-text">
             <p class="section-tag">ABOUT ME</p>
-            <h2>Senior GIS Analyst & Remote Sensing Analyst</h2>
+            <h2>Senior GIS & Remote Sensing Analyst</h2>
             <p>Hi! I am Dhina, a GIS and remote sensing analyst who loves using maps and spatial data to help protect our planet. Most of my career has been in the NGO sector, where I focus on satellite monitoring, tracking deforestation, and enabling sustainable & responsible supply chains.</p> 
             <p>I believe that even something as simple as an Excel spreadsheet, when combined with geospatial data and transparent supply chains, can contribute to meaningful change for the environment and communities. For me, GIS is not just about making maps; it is about connecting data with real-world impact and working together to make a difference.</p> 
             <p>I really enjoy working with people from different backgrounds. Brainstorming with field researchers, collaborating with non-technical partners, and aligning with colleagues across different countries and time zones. For the past four years, I have worked mostly remotely from Indonesia, collaborating with colleagues across countries and continents. More recently, I have transitioned to a hybrid working environment in Quito, Ecuador. Whether working remotely or in person, I enjoy finding ways to communicate, collaborate, and deliver effectively as part of an international team.</p>
@@ -84,8 +84,99 @@
 <!-- ================= PROJECTS ================= -->
 <div id="projects">
 
+    <!-- ================= WEBMAP ================= -->
+    <section class="project-section border-top">
+        <p class="section-tag">WEBMAP</p>
+        <h2>Global Palm Oil Dashboard</h2>
+        <p class="project-summary">I once had a challenge explaining a spatial dataset to a client using only a static map. It was difficult to interact with the map, highlight specific areas or features, or show the attributes behind the data. The presentation went well, and the key information was delivered, but it could have provided much more detail and interaction.</p>
+
+        <div class="embed-container webmap-ratio">
+            <iframe src="https://dhina-gisportfolio.github.io/global-palmoil-dashboard/" title="Global Palm Oil Dashboard"></iframe>
+        </div>
+
+        <div class="story-block">
+            <div class="story-text">
+                <h3>Project Overview</h3>
+                <p>I really enjoy building interactive maps. They are especially helpful when explaining geospatial data to people without a GIS background. Most of my experience has been building interactive maps using ArcGIS Online platforms, such as ArcGIS StoryMaps and ArcGIS Web AppBuilder. However, ArcGIS Online has credit limitations, which means we cannot always upload and host all the data we need. Since these platforms also provide pre-built applications, there are some limitations when it comes to customizing the design and functionality of the webmap.</p>
+                <p>That’s why I’ve started learning how to build my own webmaps using libraries such as MapLibre, basemap tiles from MapTiler, and isochrones through the OpenRouteService API. Please enjoy clicking, hovering, and exploring my webmap above! But don't skip the welcome pop up 😉</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SPATIAL ANALYSIS ================= -->
+    <section class="project-section border-top">
+        <p class="section-tag">GIS ANALYSIS</p>
+
+         <!-- Sub-Project A: Deforestation Driver in Vietnam -->
+        <div class="sub-project">
+            <h2>Wood Chip Mill Prioritization for Engagement</h2>
+            <p class="project-summary">It is not feasible to engage with every actor in a supply chain. Prioritizing actors associated with the greatest potential deforestation risk helps focus engagement efforts where they may have the greatest impact on reducing forest loss and promoting more sustainable sourcing practices.</p>
+
+            <div class="carousel-container ppt-ratio" id="carousel-deforestationvietnam">
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="images/R1.png" alt="Slide 1"></div>
+                </div>
+            </div>
+
+            <div class="story-block">
+                <div class="story-text">
+                    <h3>Overview & Framework</h3>
+                    <p>In this analysis, I use land cover data to assess natural forest loss and land use transitions within the potential catchment areas of wood chip mills linked to member supply chains. By identifying the dominant deforestation commodity driver at the commune level, particularly the conversion of natural forest to forest plantations. The analysis helps identify mills whose surrounding sourcing areas exhibit substantial natural forest to plantation conversion. This approach helps focus limited engagement resources on mills associated with the most significant forest loss patterns.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Sub-Project B: Deforestation and Degradation in Tanzania -->
+            <div class="sub-project">
+                <h2>Deforestation Hotspot Investigation</h2>
+                <p class="project-summary">Not every deforested area can be investigated through field surveys due to limited time and budget. Effective prioritization is therefore essential to direct resources toward areas where interventions could have the greatest impact, depending on the project's objectives.</p>
+
+            <div class="carousel-container ppt-ratio" id="carousel-deforestationtanzania">
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="images/R2-1.PNG" alt="Guide 1"></div>
+                    <div class="carousel-slide"><img src="images/R2-2.PNG" alt="Guide 2"></div>
+                </div>
+                <button class="carousel-btn prev" onclick="moveSlide('carousel-deforestationtanzania', -1)">❮</button>
+                <button class="carousel-btn next" onclick="moveSlide('carousel-deforestationtanzania', 1)">❯</button>
+            </div>
+
+                <div class="story-block">
+                    <div class="story-text">
+                        <h3>Overview & Guidelines</h3>
+                        <p>In this project, I use spatial analysis to identify districts experiencing substantial deforestation while also assessing where remaining natural forests could be prioritized for conservation. I also use satellite imagery to investigate potential drivers of forest loss and better understand the land-use changes occurring in these areas.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ================= REMOTE SENSING ANALYSIS ================= -->
+    <section class="project-section border-top">
+        <p class="section-tag">REMOTE SENSING ANALYSIS</p>
+
+         <!-- Sub-Project A: Land Cover Classification Map in Asunafo South, Ghana -->
+        <div class="sub-project">
+            <h2>Land Cover Classification in Asunafo South, Ghana</h2>
+            <p class="project-summary">What if no publicly available land-cover dataset contains the classes your project needs? Build your own!</p>
+
+            <div class="carousel-container ppt-ratio" id="carousel-landclassification">
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="images/RS-1.png" alt="Guide 1"></div>
+                    <div class="carousel-slide"><img src="images/RS-2.png" alt="Guide 2"></div>
+                </div>
+                <button class="carousel-btn prev" onclick="moveSlide('carousel-landclassification', -1)">❮</button>
+                <button class="carousel-btn next" onclick="moveSlide('carousel-landclassification', 1)">❯</button>
+            </div>
+
+            <div class="story-block">
+                <div class="story-text">
+                    <h3>Overview & Framework</h3>
+                    <p>In this project, I used Sentinel-2 satellite imagery and a supervised classification approach with the Random Trees algorithm to classify the landscape into eight land-cover classes. I developed the classification using 713 training samples, with particular emphasis on cocoa-growing areas and general agricultural land, the primary commodities of interest.</p>
+                    <p>To evaluate the reliability of the classification, I conducted an accuracy assessment for cocoa and agricultural land using available ground-truth data collected in 2026. For forest areas, where ground-truth data were insufficient for a robust accuracy assessment, I compared the mapped forest distribution with forest data from the European Commission’s Joint Research Centre (EC JRC). This similarity analysis assessed the consistency between the two datasets but did not establish the classification’s accuracy.</p>
+                </div>
+            </div>
+        </div>
+     </section>
     <!-- ================= TRACEABILITY PROJECT ================= -->
-    <section class="project-section">
+    <section class="project-section border-top">
 
         <p class="section-tag">TRACEABILITY PROJECT</p>
 
@@ -156,9 +247,9 @@
             <div class="carousel-container ppt-ratio" id="carousel-suitability">
                 <div class="carousel-track">
                     <div class="carousel-slide"><img src="images/M1-1.PNG" alt="Slide 1"></div>
-                    <div class="carousel-slide"><img src="images/M1-3.png" alt="Slide 2"></div>
-                    <div class="carousel-slide"><img src="images/M1-4.png" alt="Slide 3"></div>
-                    <div class="carousel-slide"><img src="images/M1-5.png" alt="Slide 4"></div>
+                    <div class="carousel-slide"><img src="images/M1-3.PNG" alt="Slide 2"></div>
+                    <div class="carousel-slide"><img src="images/M1-4.PNG" alt="Slide 3"></div>
+                    <div class="carousel-slide"><img src="images/M1-5.PNG" alt="Slide 4"></div>
                 </div>
                 <button class="carousel-btn prev" onclick="moveSlide('carousel-suitability', -1)">❮</button>
                 <button class="carousel-btn next" onclick="moveSlide('carousel-suitability', 1)">❯</button>
@@ -187,8 +278,8 @@
                     <div class="carousel-slide"><img src="images/M3-4.png" alt="Guide 3"></div>
                     <div class="carousel-slide"><img src="images/M3-5.png" alt="Guide 4"></div>
                 </div>
-                <button class="carousel-btn prev" onclick="moveSlide('carousel-design-guide', -1)">❮</button>
-                <button class="carousel-btn next" onclick="moveSlide('carousel-design-guide', 1)">❯</button>
+                <button class="carousel-btn prev" onclick="moveSlide('carousel-suitability', -1)">❮</button>
+                <button class="carousel-btn next" onclick="moveSlide('carousel-suitability', 1)">❯</button>
             </div>
 
             <div class="story-block">
@@ -205,26 +296,7 @@ In this way, maps can become part of an organisation’s visual identity, just l
         </div>
     </section>
 
-    <!-- ================= 3. WEBMAP ================= -->
-    <section class="project-section border-top">
-        <p class="section-tag">WEBMAP</p>
-        <h2>Global Palm Oil Dashboard</h2>
-        <p class="project-summary">I once had a challenge explaining a spatial dataset to a client using only a static map. It was difficult to interact with the map, highlight specific areas or features, or show the attributes behind the data. The presentation went well, and the key information was delivered, but it could have provided much more detail and interaction.</p>
-
-        <div class="embed-container webmap-ratio">
-            <iframe src="https://dhina-gisportfolio.github.io/global-palmoil-dashboard/" title="Global Palm Oil Dashboard"></iframe>
-        </div>
-
-        <div class="story-block">
-            <div class="story-text">
-                <h3>Project Overview</h3>
-                <p>I really enjoy building interactive maps. They are especially helpful when explaining geospatial data to people without a GIS background. Most of my experience has been building interactive maps using ArcGIS Online platforms, such as ArcGIS StoryMaps and ArcGIS Web AppBuilder. However, ArcGIS Online has credit limitations, which means we cannot always upload and host all the data we need. Since these platforms also provide pre-built applications, there are some limitations when it comes to customizing the design and functionality of the webmap.</p>
-                <p>That’s why I’ve started learning how to build my own webmaps using libraries such as MapLibre, basemap tiles from MapTiler, and isochrones through the OpenRouteService API. Please enjoy clicking, hovering, and exploring my webmap above! But don't skip the welcome pop up 😉</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= 4. PYTHON SCRIPT ================= -->
+    <!-- ================= AUTOMATION SCRIPT ================= -->
     <section class="project-section border-top">
         <p class="section-tag">AUTOMATION TOOLS</p>
 
@@ -653,7 +725,7 @@ End Sub</code></pre>
     <p>
         <a href="mailto:ramadhinan9@gmail.com" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">Email</a> • 
         <a href="https://www.linkedin.com/in/ramadhina-nurdianti" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">LinkedIn</a> • 
-        <a href="https://github.com/dhina-gisportfolio" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">GitHub</a> • 
+        <a href="https://github.com/dhina-gisportfolio" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">GitHub</a> 
     </p>
 
 </footer>
